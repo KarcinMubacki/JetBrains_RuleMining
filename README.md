@@ -19,12 +19,12 @@ during the calculations for specifics rules observations with NAs will be disreg
 Redundant rules:
 
 We will say a rule is redundant (overly specific) if there exists its 'subset' in the ruleset (example: A AND B is a 'subset' of A AND B AND NOT C)
-and the subset has a similar or higher confidence (precisely: confidence(subset) >= 0.98*confidence(superset))
+and the subset has a similar or higher confidence (precisely: confidence(subset) >= 0.98 x confidence(superset))
 Redundant rules will be deleted from the ruleset
 
 Rule merging:
 
-Since some rules can 'close' in the predictive sense we would like to found such relations and merge such rules into single ones
+Since some rules can be 'close' in the predictive sense we would like to found such relations and merge such rules into single ones
 We do that using a queue:
 - we set up a queue of all the rules currently in the dataset (after deleting redundant rules);
 - check the first rule against other rules by taking their intersection (example: A AND B intersected with B AND C will give B) and computing their support/confidence
