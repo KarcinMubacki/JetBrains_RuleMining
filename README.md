@@ -8,6 +8,7 @@ Solution idea:
 Rely on two basic ARM concepts: support and confidence
 
 Support of a rule - % of instances (rows) sufficing the rule's antecendent
+
 Confidence of a rule - among the ones sufficing rule's antecendent, % of instances sufficing target (donor_is_old in this case)
 
 NA handling:
@@ -34,3 +35,6 @@ We do that using a queue:
 Output:
 After deleting redundant rules and merging potential rules we sort the remaining rules by a convex combination of support and confidence of the rule (by default 0.8*confidence + 0.2*support)
 and the rules are saved into a desired .txt file
+
+Run the code with
+python main.py --data data/dataset.tsv --rules data/rules.txt
