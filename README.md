@@ -33,7 +33,7 @@ We do that using a queue:
 - looping until queue is empty or number of iterations exceeds safety threshold (escaping potential infinite loops)
 
 Output:
-After deleting redundant rules and merging potential rules we sort the remaining rules by a convex combination of support and confidence of the rule (by default 0.8*confidence + 0.2*support)
+After deleting redundant rules and merging potential rules we sort the remaining rules by a convex combination of support and confidence of the rule (by default 0.8 x confidence + 0.2 x support)
 and the rules are saved into a desired .txt file
 
 Run the code with
